@@ -17,6 +17,9 @@ const setlists = {
     },
     "secondShow" : {
       "eventDate" : "25-12-1995"
+    },
+    "thirdShow" : {
+      "eventDate" : "25-12-1984"
     }
     
   }
