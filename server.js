@@ -162,7 +162,7 @@ app.get('/', (request, response)=>{
 app.get('/api/:something',(request,response)=>{
     const arbitraryThing = request.params.something.toLowerCase()
 
-    if( setlists[arbitraryThing] ){
+    if( setlists.arbitraryThing ){
         response.json(setlists.arbitraryThing[0].setlist[0].eventDate)
     }else{
         response.json(setlists['unknown'])
