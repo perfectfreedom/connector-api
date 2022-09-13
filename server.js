@@ -7,10 +7,18 @@ app.use(cors())
 
 const setlists = {
   "firstuser" : {
-    "eventDate" : "23-08-1964"
+    "firstShow" : { 
+      "eventDate" : "23-08-1964"
+    }
   },
   "seconduser" : {
-    "eventDate" : "23-06-1964"
+    "firstShow" : {
+      "eventDate" : "23-06-1964"
+    },
+    "secondShow" : {
+      "eventDate" : "25-12-1995"
+    }
+    
   }
 }
 
