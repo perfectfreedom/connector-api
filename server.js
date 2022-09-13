@@ -77,7 +77,7 @@ const setlists = {
         "total" : 42,
         "page" : 1,
         "itemsPerPage" : 20
-      } ],
+      } ] }/*,
 
       "seconduser" : [ {
         "setlist" : [ {
@@ -153,7 +153,7 @@ const setlists = {
     } ]
 
       
-}
+}*/
 
 app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html')
