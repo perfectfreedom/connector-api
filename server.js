@@ -40,6 +40,7 @@ app.get('/api/:something',(request,response)=>{
     })
         .then(res => res.json()) // parse response as JSON
         .then(data => {
+         response.json(data);
          console.log(data);
         })
         .catch(err => {
