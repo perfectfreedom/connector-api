@@ -161,6 +161,20 @@ app.get('/', (request, response)=>{
 
 app.get('/api/:something',(request,response)=>{
     const arbitraryThing = request.params.something.toLowerCase()
+    const url = `https://api.setlist.fm/rest/1.0/user/${arbitraryThing}/attended`
+    fetch(url, {
+      headers: {
+          'x-api-key': 'u5LIAchLmBhGqtbC2jBMVioW4ubDgassB4Fc',
+          'Accept': 'application/json'
+      }
+    })
+        .then(res => res.json()) // parse response as JSON
+        .then(data => {
+         console.log(data);
+        })
+        .catch(err => {
+          console.log(`error ${err}`)
+        });
 
     if( setlists[arbitraryThing] ){
         response.json(setlists[arbitraryThing]/*[0].setlist[0].eventDate*/)
@@ -169,6 +183,11 @@ app.get('/api/:something',(request,response)=>{
     }
     
 })
+
+
+    
+
+
 
 app.listen(PORT, ()=>{
     console.log(`The server is now running on port ${PORT}! Betta Go Catch It!`)
