@@ -47,11 +47,11 @@ app.get('/api/:something',(request,response)=>{
           console.log(`error ${err}`)
         });
 
-    if( setlists[arbitraryThing] ){
+/*    if( setlists[arbitraryThing] ){
         response.json(setlists[arbitraryThing])
     }else{
         response.json(setlists['unknown'])
-    }
+    }*/
     
   })
 
