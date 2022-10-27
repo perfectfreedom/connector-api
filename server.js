@@ -29,9 +29,10 @@ app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:something',(request,response)=>{
+app.get('/api/:something/:page',(request,response)=>{
     const arbitraryThing = request.params.something.toLowerCase()
-    const url = `https://api.setlist.fm/rest/1.0/user/${arbitraryThing}/attended`
+    const page = request.params.page.toLowerCase()
+    const url = `https://api.setlist.fm/rest/1.0/user/${arbitraryThing}/attended/?p=${page}`
     fetch(url, {
       headers: {
           'x-api-key': 'u5LIAchLmBhGqtbC2jBMVioW4ubDgassB4Fc',
