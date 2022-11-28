@@ -37,8 +37,8 @@ app.get('/api/:something/:page',(request,response)=>{
       headers: {
           'x-api-key': 'u5LIAchLmBhGqtbC2jBMVioW4ubDgassB4Fc',
           'Accept': 'application/json'
-      }
-    })
+      },
+    }, {credentials: 'include'})
         .then(res => res.json()) // parse response as JSON
         .then(data => {
          response.json(data);
